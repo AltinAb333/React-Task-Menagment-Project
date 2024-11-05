@@ -3,22 +3,21 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import Home from "./components/Home.jsx";
-import Transaction from "./components/Transaction.jsx"; // Example additional component
+import Login from "./components/Login.jsx";
+import CreateTransaction from "./components/CreateTransaction.jsx";
 
 function App() {
   return (
     <Router>
       {" "}
-      {/* This provides the Router context to the app */}
       <div className="min-h-screen bg-gray-100">
         <Header />
         <Sidebar />
         <Routes>
           {" "}
-          {/* Define routes here */}
           <Route path="/" element={<Home />} />
-          <Route path="/new-transaction" element={<Transaction />} />
-          {/* Add other routes like Login/Signup */}
+          <Route path="/create" element={<CreateTransaction />} /> 
+          <Route path="/login" element={<Login />}/>
         </Routes>
       </div>
     </Router>
