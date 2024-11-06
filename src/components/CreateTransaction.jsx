@@ -1,5 +1,13 @@
-export default function CreateTransaction(){
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+
+export default function CreateTransaction({ isOpen, toggleSidebar }){
     return (
-        <h1 className="px-72 py-16">New transaction</h1>
+        <div>
+            <Header isOpen={isOpen} toggleSidebar={toggleSidebar} />
+            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+            <h1 className="px-72 py-16">New transaction</h1>
+        </div>
+        
     )
 }

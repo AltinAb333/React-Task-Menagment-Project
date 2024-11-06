@@ -4,13 +4,8 @@ import Sidebar from "./Sidebar";
 import { transactions } from "../data/transactions";
 import Header from "./Header";
 
-const Home = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  function toggleSidebar() {
-    setIsOpen((prevState) => !prevState);
-  }
-
+const Home = ({ isOpen, toggleSidebar }) => {
+  
   return (
     <div>
       <Header isOpen={isOpen} toggleSidebar={toggleSidebar} />

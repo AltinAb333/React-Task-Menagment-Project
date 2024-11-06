@@ -8,14 +8,19 @@ import CreateTransaction from "./components/CreateTransaction.jsx";
 import Transaction from "./components/Transaction.jsx";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  function toggleSidebar() {
+    setIsOpen((prevState) => !prevState);
+  }
 
   return (
     <Router>
       <div className="min-h-screen bg-gray-100">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<CreateTransaction />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home isOpen={isOpen} toggleSidebar={toggleSidebar} />} />
+          <Route path="/create" element={<CreateTransaction isOpen={isOpen} toggleSidebar={toggleSidebar} />} />
+          <Route path="/login" element={<Login isOpen={isOpen} toggleSidebar={toggleSidebar} />} />
         </Routes>
       </div>
     </Router>

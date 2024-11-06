@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import image from "../images/menu.png";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
@@ -13,25 +14,23 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <nav className="mt-20">
             <ul>
               <li className="p-4 hover:bg-gray-700 cursor-pointer">
-                <Link to="/">Home</Link>
+                <Link to="/"><button className="w-full text-left">Home</button></Link>
               </li>
               <li className="p-4 hover:bg-gray-700 cursor-pointer">
-                <Link to="/create">Create Transaction</Link>
+                <Link to="/create"><button className="w-full text-left">Create Transaction</button></Link>
               </li>
               <li className="p-4 hover:bg-gray-700 cursor-pointer">
-                <Link to="/login">Login/Signup</Link>
+                <Link to="/login"><button className="w-full text-left">Login/Signup</button></Link>
               </li>
-              <li className="p-4 cursor-pointer">
-                <button
-                  onClick={toggleSidebar}
-                  className="top-5 left-5 text-white sm:hidden bg-red-800 rounded-lg p-2 "
-                >
-                  <p>Click to close</p>
-                  {console.log("Sidebar " + isOpen)}
-                </button>
-              </li>
+              <li className="p-4 cursor-pointer top-3/4"></li>
             </ul>
           </nav>
+          <button
+            onClick={toggleSidebar}
+            className="bottom-2.5 end-2.5 text-white bg-gray-300 rounded-lg p-2 absolute inline-flex items-center "
+          >
+            <img src={image} alt="Close sidebar" className="size-6" />
+          </button>
         </div>
       </div>
     </>
