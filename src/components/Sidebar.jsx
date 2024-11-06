@@ -4,15 +4,6 @@ import { Link } from "react-router-dom";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
-      <button
-        onClick={toggleSidebar}
-        className={`mt-20 text-white bg-gray-800 rounded-lg p-2 ${
-          isOpen ? " hidden" : " "
-        }`}
-      >
-        Open Sidebar
-      </button>
-      {console.log("Sidebar" + isOpen)}
       <div>
         <div
           className={` fixed top-0 left-0 h-full bg-gray-800 text-white transform ${

@@ -5,12 +5,13 @@ import Sidebar from "./components/Sidebar.jsx";
 import Home from "./components/Home.jsx";
 import Login from "./components/Login.jsx";
 import CreateTransaction from "./components/CreateTransaction.jsx";
+import Transaction from "./components/Transaction.jsx";
 
 function App() {
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-100">
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateTransaction />} />
