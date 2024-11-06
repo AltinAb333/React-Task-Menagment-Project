@@ -2,8 +2,8 @@ import React from "react";
 
 const Transaction = ({ title, category, amount, date }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md mb-4 w-full sm:w-80 md:w-60 lg:w-64">
-      <div className="mt-4 justify-between">
+    <div className="bg-white p-4 rounded-lg shadow-md mb-4 w-full sm:w-80 md:w-72 lg:w-72 ">
+      <div className="mt-4 justify-between flex-row gap-1">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-gray-600">Category: {category}</p>
         <p className="text-gray-800 font-bold">{amount}</p>
