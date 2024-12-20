@@ -1,12 +1,10 @@
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import AuthForm from "./AuthForm";
 
-export default function Login({ isOpen, toggleSidebar }){
+export default function Login(){
     return (
         <div>
-            <Header isOpen={isOpen} toggleSidebar={toggleSidebar} />
-            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-            <h1 className="px-72 py-16">New LogIn</h1>
+            <h1 className="">New LogIn</h1>
+            {/* <AuthForm /> */}
         </div>
         
     )
